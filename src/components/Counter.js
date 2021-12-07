@@ -66,14 +66,15 @@ export default function Counter(props) {
   const style = {
     fontSize: '1.5em',
     marginBottom: '0.3em',
-    color: count % 2 === 0 ? 'royalblue' : 'crimson',
+    color: count % 2 === 0 ? 'royalblue' : 'crimson', //step 2
   };
 
   return (
     <div className='widget-counter container'>
       <h2>Counter</h2>
       <div id='count' style={style}>
-        Number 0 is even {/* STEP 3 */}
+        {/* step2 */}
+        {`Number ${count} is ${count % 2 === 0 ? 'even' : 'odd'}`}
       </div>
       <div>
         <button id='increment' onClick={increment}>Increment</button>
